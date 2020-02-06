@@ -1,0 +1,15 @@
+table {
+    width: 70%;
+}
+
+table thead {
+    background-color: chocolate;
+}
+
+table tbody {
+    background-color: darkseagreen;
+}
+
+table td {
+    border: 1px solid;
+}

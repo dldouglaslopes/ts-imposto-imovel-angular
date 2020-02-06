@@ -1,0 +1,24 @@
+<p>
+    <strong>Proprietários</strong>
+</p>
+
+<table>
+    <thead>
+        <td>ID</td>
+        <td>Nome</td>
+        <td>Endereco</td>
+        <td>...</td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let proprietario of proprietarios">
+            <td>{{proprietario.id}}</td>
+            <td>{{proprietario.nome}}</td>
+            <td>{{proprietario.endereco}}</td>
+            <td>
+                <a routerLink="/proprietarios/atualizar/{{proprietario.id}}"> 
+                    EDITAR 
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>

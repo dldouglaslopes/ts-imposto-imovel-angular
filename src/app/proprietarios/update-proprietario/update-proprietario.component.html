@@ -1,0 +1,13 @@
+<h2>Atualizar proprietario</h2>
+
+<div *ngIf="request">
+    <label> Nome:
+        <input placeholder="Insira o nome" [(ngModel)]="request.nome">
+    </label>
+    <br><br>
+    <label> Endereço:
+        <input placeholder="Insira o nome" [(ngModel)]="request.endereco">
+    </label>
+    <br><br>
+    <button (click)="atualizar()">Atualizar</button>
+</div>
