@@ -1,0 +1,45 @@
+<p>
+    <strong>Imóveis</strong>
+</p>
+
+<table>
+    <thead>
+        <td>ID</td>
+        <td>Proprietario</td>
+        <td>Endereco</td>
+        <td>Area Terreno</td>
+        <td>Area Construida</td>
+        <td>Area Total</td>
+        <td>Aliquota</td>
+        <td>Venal Terreno</td>
+        <td>Venal Construcao</td>
+        <td>Venal Total</td>
+        <td>Aliquota Aplicada</td>
+        <td>Imposto</td>
+        <td>...</td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let imovel of imoveis">
+            <td>{{imovel.id}}</td>
+            <td>{{imovel.idProprietario}}</td>
+            <td>{{imovel.endereco}}</td>
+            <td>{{imovel.areaTerreno}}</td>
+            <td>{{imovel.areaConstruida}}</td>
+            <td>{{imovel.areaTotal}}</td>
+            <td>{{imovel.aliquota}}</td>
+            <td>{{imovel.venalTerreno}}</td>
+            <td>{{imovel.venalConstrucao}}</td>
+            <td>{{imovel.venalTotal}}</td>
+            <td>{{imovel.aliquotaAplicada}}</td>
+            <td>{{imovel.imposto}}</td>
+            <td>
+                <a routerLink="/imoveis/atualizar/{{imovel.id}}"> 
+                    EDITAR 
+                </a> |
+                <a routerLink="/imoveis/deletar/{{imovel.id}}"> 
+                    DELETAR 
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>

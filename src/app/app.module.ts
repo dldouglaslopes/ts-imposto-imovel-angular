@@ -9,6 +9,11 @@ import { CreateProprietarioComponent } from './proprietarios/create-proprietario
 import { FormsModule } from '@angular/forms';
 import { UpdateProprietarioComponent } from './proprietarios/update-proprietario/update-proprietario.component';
 import { DeleteProprietarioComponent } from './proprietarios/delete-proprietario/delete-proprietario.component';
+import { ImoveisComponent } from './imoveis/imoveis.component';
+import { CreateImovelComponent } from './imoveis/create-imovel/create-imovel.component';
+import { DeleteImovelComponent } from './imoveis/delete-imovel/delete-imovel.component';
+import { UpdateImovelComponent } from './imoveis/update-imovel/update-imovel.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,13 +21,18 @@ import { DeleteProprietarioComponent } from './proprietarios/delete-proprietario
     ProprietariosComponent,
     CreateProprietarioComponent,
     UpdateProprietarioComponent,
-    DeleteProprietarioComponent
+    DeleteProprietarioComponent,
+    ImoveisComponent,
+    CreateImovelComponent,
+    DeleteImovelComponent,
+    UpdateImovelComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

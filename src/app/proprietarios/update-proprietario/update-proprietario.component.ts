@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProprietarioService } from '../proprietario.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UpdateProprietario } from '../proprietario.model';
 
 @Component({
@@ -14,7 +14,8 @@ export class UpdateProprietarioComponent implements OnInit {
   request: UpdateProprietario;
 
   constructor(private proprietarioService: ProprietarioService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
@@ -28,6 +29,7 @@ export class UpdateProprietarioComponent implements OnInit {
 
   atualizar(){
     this.proprietarioService.updateProprietario(this.id, this.request).subscribe(res => {
+      this.router.navigate(['/proprietarios']);
       alert(`Nome: ${res.nome}, Endereco: ${res.endereco}`);
     });
   }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Proprietario, CreateProprietario } from '../proprietario.model';
 import { ProprietarioService } from '../proprietario.service';
-import { ProprietariosComponent } from '../proprietarios.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-proprietario',
@@ -17,7 +17,8 @@ export class CreateProprietarioComponent implements OnInit {
 
   proprietario: Proprietario;
 
-  constructor(private proprietarioService: ProprietarioService) { }
+  constructor(private proprietarioService: ProprietarioService,
+              private router: Router) { }
 
   ngOnInit() {
   }
@@ -26,5 +27,6 @@ export class CreateProprietarioComponent implements OnInit {
     this.proprietarioService.createProprietario(this.request).subscribe( res => {
       this.proprietario = res;
     });
+    this.router.navigate(['/proprietarios']);
   }
 }

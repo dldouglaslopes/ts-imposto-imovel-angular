@@ -1,0 +1,29 @@
+<h2>Deletar imovel</h2>
+
+<div *ngIf="imovel">
+    <label>Id: <strong>{{imovel.id}}</strong></label>
+    <br>
+    <label>Nome: <strong>{{imovel.nome}}</strong></label>
+    <br>
+    <label>Endereco: <strong>{{imovel.endereco}}</strong></label>
+    <br>
+    <label>Area Terreno: <strong>{{imovel.areaTerreno}}</strong></label>
+    <br>
+    <label>Area Construida: <strong>{{imovel.areaConstruida}}</strong></label>
+    <br>
+    <label>Area Total: <strong>{{imovel.areaTotal}}</strong></label>
+    <br>
+    <label>Aliquota: <strong>{{imovel.aliquota}}</strong></label>
+    <br>
+    <label>Venal Terreno: <strong>{{imovel.venalTerreno}}</strong></label>
+    <br>
+    <label>Venal Construcao: <strong>{{imovel.venalConstrucao}}</strong></label>
+    <br>
+    <label>Venal Total: <strong>{{imovel.venalTotal}}</strong></label>
+    <br>
+    <label>Aliquota Aplicada: <strong>{{imovel.aliquotaAplicada}}</strong></label>
+    <br>
+    <label>Imposto: <strong>{{imovel.imposto}}</strong></label>
+    <br><br>
+    <button (click)="delete()">Confirmar</button>
+</div>

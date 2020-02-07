@@ -1,0 +1,37 @@
+<h2>Atualizar proprietario</h2>
+
+<div *ngIf="request">
+    <label> Proprietario:
+        <input placeholder="Insira o id do Proprietario" [(ngModel)]="request.idProprietario">
+    </label>
+    <br><br>
+    <label> Endereço:
+        <input placeholder="Insira o endereco" [(ngModel)]="request.endereco">
+    </label>
+    <br><br>
+    <label> Area Terreno:
+        <input placeholder="Insira a area do terreno" [(ngModel)]="request.areaTerreno">
+    </label>
+    <br><br>
+    <label> Area Construida:
+        <input placeholder="Insira a area construida" [(ngModel)]="request.areaConstruida">
+    </label>
+    <br><br>
+    <label> Aliquota:
+        <input placeholder="Insira a aliquota" [(ngModel)]="request.aliquota">
+    </label>
+    <br><br>
+    <label> Venal Terreno:
+        <input placeholder="Insira o valor venal do terreno" [(ngModel)]="request.venalTerreno">
+    </label>
+    <br><br>
+    <label> Venal Construcao:
+        <input placeholder="Insira o valor venal de construcao" [(ngModel)]="request.venalConstrucao">
+    </label>
+    <br><br>
+    <label> Aliquota Aplicada:
+        <input placeholder="Insira a aliquota aplicada" [(ngModel)]="request.aliquotaAplicada">
+    </label>
+    <br><br>
+    <button (click)="atualizar()">Atualizar</button>
+</div>
