@@ -26,7 +26,8 @@ export class CreateProprietarioComponent implements OnInit {
   save(){
     this.proprietarioService.createProprietario(this.request).subscribe( res => {
       this.proprietario = res;
+      this.router.navigate(['/proprietarios']);
     });
-    this.router.navigate(['/proprietarios']);
+    
   }
 }

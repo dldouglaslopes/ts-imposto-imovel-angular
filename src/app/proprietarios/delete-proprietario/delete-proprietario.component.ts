@@ -26,12 +26,12 @@ export class DeleteProprietarioComponent implements OnInit {
 
   delete() {
     this.proprietarioService.deleteProprietario(this.id).subscribe(res => {
-      this.router.navigate(['/proprietarios']);
       alert('Removido com sucesso!');
+      this.router.navigate(['/proprietarios']);
     },
     error =>{
-      this.router.navigate(['/proprietarios']);
       alert('Não é possível remover com associação a imóveis!');
+      this.router.navigate(['/proprietarios']);
     });
   }
 }

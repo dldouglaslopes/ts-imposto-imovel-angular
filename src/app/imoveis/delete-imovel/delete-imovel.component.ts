@@ -26,12 +26,12 @@ export class DeleteImovelComponent implements OnInit {
 
   delete() {
     this.imovelService.deleteImovel(this.id).subscribe(res => {
-      this.router.navigate(['/imoveis']);
       alert('Removido com sucesso!');
+      this.router.navigate(['/imoveis']);
     },
     error =>{
-      this.router.navigate(['/imoveis']);
       alert('Não é possível remover com associação a imóveis!');
+      this.router.navigate(['/imoveis']);
     });
   }
 }

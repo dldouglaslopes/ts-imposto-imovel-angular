@@ -2,15 +2,18 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Proprietario, CreateProprietario, UpdateProprietario } from './proprietario.model';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProprietarioService {
 
-  private url = 'http://localhost:8080';
+  private url: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.url = `${environment.apiUrl}`;
+  }
 
   getProprietarios(): Observable<Proprietario[]> {
     return this.http.get<Proprietario[]>(`${this.url}/proprietarios`);

@@ -29,8 +29,8 @@ export class UpdateProprietarioComponent implements OnInit {
 
   atualizar(){
     this.proprietarioService.updateProprietario(this.id, this.request).subscribe(res => {
-      this.router.navigate(['/proprietarios']);
       alert(`Nome: ${res.nome}, Endereco: ${res.endereco}`);
+      this.router.navigate(['/proprietarios']);
     });
   }
 

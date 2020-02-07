@@ -49,7 +49,7 @@ export class UpdateImovelComponent implements OnInit {
             Venal Total: ${res.venalTotal},
             Aliquota Aplicada: ${res.aliquotaAplicada},
             Imposto: ${res.imposto})`);
+      this.router.navigate(['/imoveis']);
     });
-    this.router.navigate(['/imoveis']);
   }
 }
