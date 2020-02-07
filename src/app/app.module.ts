@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { CreateProprietarioComponent } from './proprietarios/create-proprietario/create-proprietario.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateProprietarioComponent } from './proprietarios/update-proprietario/update-proprietario.component';
+import { DeleteProprietarioComponent } from './proprietarios/delete-proprietario/delete-proprietario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProprietariosComponent,
     CreateProprietarioComponent,
-    UpdateProprietarioComponent
+    UpdateProprietarioComponent,
+    DeleteProprietarioComponent
   ],
   imports: [
     BrowserModule,

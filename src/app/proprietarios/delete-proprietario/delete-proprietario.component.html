@@ -1,0 +1,9 @@
+<h2>Deletar proprietario</h2>
+
+<div *ngIf="proprietario">
+    <label> Nome: <strong> {{proprietario.nome}} </strong> </label>
+    <br><br>
+    <label> Endereço: <strong> {{proprietario.endereco}} </strong> </label>
+    <br><br>
+    <button (click)="delete()">Confirmar</button>
+</div>
